@@ -1,5 +1,11 @@
-import urllib.request
+## See examples in https://info.arxiv.org/help/api/user-manual.html#query_details
+# This script queries the arXiv API for papers related to machine learning.
+# It retrieves the title, first author, and summary of each paper.
+# The search query is for papers with "machine learning" in the title.
+# The script stops when it reaches papers from 2018.
+# The results are stored in a list of dictionaries.
 
+import urllib.request
 import time
 import feedparser
 
