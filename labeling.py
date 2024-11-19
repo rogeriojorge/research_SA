@@ -7,9 +7,12 @@
 # Example labeled dataset for sentiment
 # This is a small example dataset, you'd manually label a larger portion
 manual_labels = {
-    "paper1.pdf": "positive",   # Paper with an optimistic tone or breakthrough
-    "paper2.pdf": "neutral",    # Paper is purely informative, no strong sentiment
-    "paper3.pdf": "negative",   # Paper discusses significant challenges or limitations
+    "2401.14041.pdf": "positive",   # Paper with an optimistic tone or breakthrough
+    "2306.02354-min.pdf": "neutral",   # Paper is purely informative, no strong sentiment
+    "2310.16711-min.pdf": "neutral",
+    "2104.06282-min.pdf": "neutral",
+    "2201.12547.pdf": "positive",
+    "2401.14041.pdf": "positive"
 }
 
 # Function to retrieve sentiment label (for small manual dataset)
@@ -83,13 +86,13 @@ def get_sentiment_label_textblob(paper_text):
 # This example assumes you have a collection of papers with text content.
 # The sentiment labels are added to the paper dictionary for further processing.
 
-# Example: Automatic labeling for a collection of papers
-for filename, paper in papers.items():
-    paper_text = paper['text']  # Assuming 'text' contains the full text or abstract
-    # Use VADER or TextBlob for automatic sentiment labeling
-    sentiment = get_sentiment_label_vader(paper_text)  # or get_sentiment_label_textblob()
-    paper['sentiment'] = sentiment  # Add the sentiment label to the paper dictionary
+# # Example: Automatic labeling for a collection of papers
+# for filename, paper in papers.items():
+#     paper_text = paper['text']  # Assuming 'text' contains the full text or abstract
+#     # Use VADER or TextBlob for automatic sentiment labeling
+#     sentiment = get_sentiment_label_vader(paper_text)  # or get_sentiment_label_textblob()
+#     paper['sentiment'] = sentiment  # Add the sentiment label to the paper dictionary
 
-# Example output
-for filename, paper in papers.items():
-    print(f"Paper: {filename}, Sentiment: {paper['sentiment']}")
+# # Example output
+# for filename, paper in papers.items():
+#     print(f"Paper: {filename}, Sentiment: {paper['sentiment']}")
